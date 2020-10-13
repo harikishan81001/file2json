@@ -7,8 +7,11 @@ The output will be a list of one such dictionary per row.
 import csv
 import json
 import xlrd
-from datasync.exceptions import InvalidFileFormat
 
+class InvalidFileFormat(Exception):
+    """
+    raised if file format is not supported
+    """
 
 class File2Json(object):
     """
